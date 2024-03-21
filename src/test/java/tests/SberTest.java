@@ -1,15 +1,12 @@
 package tests;
 
-import com.codeborne.selenide.Condition;
+
 import com.codeborne.selenide.SelenideElement;
 import jdk.jfr.Description;
 import org.junit.jupiter.api.Tag;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.Test;
 
-import java.time.Duration;
+import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.*;
@@ -42,7 +39,7 @@ public class SberTest extends BaseTest {
         String list = String.valueOf(app.sberCarParam.firstPageList.findElements(byXpath("//img[@alt='Jetta']")).stream().toList());
         String jetta = "Jetta";
         boolean containsJetta = list.contains(jetta);
-        System.out.println("Наличие нужной Джетты в списке " + containsJetta);
+        System.out.println("Наличие нужной Джетты в списке: " + containsJetta);
 
         app.sberCarParam.clickOnCar.click();
         app.sberCarParam.fullDescription.click();
