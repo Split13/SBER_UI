@@ -25,6 +25,7 @@ public class SberTest extends BaseTest {
         app.googlePage.googleSearch.setValue("СберЛизинг");
         app.googlePage.googleSearch.sendKeys(Keys.ENTER);
         app.googlePage.searchSber.click();
+        app.sberPage.cookies.click();
         app.sberPage.sberLeasing.click();
         app.sberCarParam.driveFull.click();
         app.sberCarParam.driveFront.click();
